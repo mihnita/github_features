@@ -21,4 +21,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: echo ============== && java -version && javac -version && mvn -version && ant -version && git --version && gpg --version && curl --version && date
+      run: mvn -B package --file github_test/pom.xml
