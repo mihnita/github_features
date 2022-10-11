@@ -18,6 +18,7 @@ jobs:
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_TOKEN }}
     steps:
+    - uses: actions/checkout@v3
     - name: Build with Maven
       run: |
         echo ==============
@@ -29,4 +30,7 @@ jobs:
         gpg --version
         curl --version
         date
+        echo ===== github.actor : ${{ github.actor }} =========
+        echo ===== secrets.github_token : ${{ secrets.github_token }} =========
+        echo ===== secrets.DOCKER_TOKEN : ${{ secrets.DOCKER_TOKEN }} =========
         mvn -B package --file github_test/pom.xml
