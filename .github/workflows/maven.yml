@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: okapi:latest
+    runs-on: okapi
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
