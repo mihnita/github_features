@@ -12,6 +12,7 @@ public class AppTest extends TestCase {
         return new TestSuite( AppTest.class );
     }
     public void testApp() {
+        System.out.println( "Hello \033[91m RED \033[m World!" );
         assertTrue( true );
     }
 }
