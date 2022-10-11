@@ -25,7 +25,7 @@ jobs:
       with:
         path: ~/.m2/repository
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: ${{ runner.os }}-maven-
+        restore-keys: test
 
     - name: Build with Maven
       run: |
@@ -42,3 +42,7 @@ jobs:
         echo ===== secrets.github_token : ${{ secrets.github_token }} =========
         echo ===== secrets.DOCKER_TOKEN : ${{ secrets.DOCKER_TOKEN }} =========
         mvn -B package --file github_test/pom.xml
+        echo ===== PWD : $PWD =========
+        cd
+        echo ===== PWD : $PWD =========
+        ls -ali
