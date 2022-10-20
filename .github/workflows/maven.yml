@@ -13,7 +13,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/mihnita/okapi:latest
+      # image: ghcr.io/mihnita/okapi:latest
+      image: us-docker.pkg.dev/android-emulator-268719/images/r-google-x64:30.0.23
     steps:
     - uses: actions/checkout@v3
         
