@@ -28,13 +28,12 @@ jobs:
     - name: Build with Maven
       run: |
         echo ==== VERSIONS ==========
-        java -version
-        javac -version
-        mvn -version
-        ant -version
-        git --version
-        gpg --version
-        curl --version
-        date
+        echo $PWD
         echo ========================
-        mvn -B package --file github_test/pom.xml
+        set
+        echo ========================
+        ls -ali
+        echo ========================
+        find /
+        echo ========================
+
